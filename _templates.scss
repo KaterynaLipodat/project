@@ -1,0 +1,17 @@
+%flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+%dots{
+    display: flex;
+    justify-content: center;
+}
+%point{
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 14px;
+}

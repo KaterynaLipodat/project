@@ -1,0 +1,55 @@
+
+@mixin font ($font-family, $fz, $line-height) {
+    font-family: $font-family;
+    font-size: $fz;
+    line-height: $line-height;
+}
+@mixin point-after {
+    content: "";
+    border-radius: 100%;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+}
+@mixin red-text {
+    background: -webkit-linear-gradient(219deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin big-red-text {
+    background: -webkit-linear-gradient(1deg, #F0145A 0.84%, #EF8080 99.96%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin text-arrow {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+@mixin arrow-after {
+    content: "";
+    position: absolute;
+    top: 28%;
+    width: 4.5px;
+    height: 4.5px;
+    transform: rotate(45deg);
+}
+
+
+@mixin btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $blue_active;
+    color: $white;
+    @include font('TT Norms Bold', 14px, 17px);
+    width: 250px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5)
+}
