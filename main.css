@@ -118,6 +118,23 @@
   }
 }
 
+.page5_header {
+  margin-bottom: 73px;
+}
+
+@media screen and (max-width: 968px) {
+  .page5_header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,6 +152,10 @@
   font-size: 38px;
   line-height: 45px;
   color: #323264;
+}
+
+.logo .page5-name {
+  color: #fff;
 }
 
 .nav {
@@ -356,6 +377,19 @@
   }
 }
 
+.nav .logo-tablet .page-name_ltl .page5-name {
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .nav .logo-tablet .page-name_ltl .page5-name {
+    color: #fff;
+    font-family: "TT Norms";
+    font-size: 19px;
+    line-height: 22px;
+  }
+}
+
 .nav .logo-tablet .burger {
   display: none;
 }
@@ -432,6 +466,25 @@
   color: #F0145A;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+.nav_list_link_active {
+  position: relative;
+}
+
+.nav_list_link_active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  top: 100%;
+  left: 0;
+}
+
+.nav_list_link_active:hover {
+  color: #fff;
 }
 
 .nav_list_link_wbg {
@@ -1143,6 +1196,10 @@
   transition: .3s;
 }
 
+.page1_section3 {
+  width: 100%;
+}
+
 @media screen and (max-width: 500px) {
   .page1_section3 {
     min-height: 590px;
@@ -1170,6 +1227,12 @@
           justify-content: center;
   -ms-grid-columns: (minmax(360px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+}
+
+@media screen and (min-width: 1800px) {
+  .clients_grid {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1668,7 +1731,7 @@
   background: #E6E6F0;
 }
 
-.page2_section1_container, .page2_section3_container, .page3_section1_container, .page4_section1_container, .page5_section1_container {
+.page2_section1_container, .page2_section3_container, .page3_section1_container, .page4_section1_container, .page5_section1_container, .page6_main-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1680,13 +1743,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .page2_section1_container, .page2_section3_container, .page3_section1_container, .page4_section1_container, .page5_section1_container {
+  .page2_section1_container, .page2_section3_container, .page3_section1_container, .page4_section1_container, .page5_section1_container, .page6_main-section {
     padding: 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .page2_section1_container, .page2_section3_container, .page3_section1_container, .page4_section1_container, .page5_section1_container {
+  .page2_section1_container, .page2_section3_container, .page3_section1_container, .page4_section1_container, .page5_section1_container, .page6_main-section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: start;
@@ -2513,5 +2576,278 @@
 
 .map_picture_img {
   width: 100%;
+}
+
+.page6_main-section {
+  background-image: url(./img/Cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  max-width: none;
+}
+
+@media screen and (min-width: 1120px) {
+  .page6_main-section_container {
+    width: 1100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page6_main-section_container {
+    width: 1320px;
+  }
+}
+
+.services_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 620px) {
+  .services_info {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.services_info_text {
+  font-family: "TT Norms Regular";
+  font-size: 21px;
+  line-height: 30px;
+  color: #fff;
+  max-width: 860px;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 620px) {
+  .services_info_text {
+    text-align: left;
+  }
+}
+
+.services_heading-mm {
+  margin-bottom: 20px;
+}
+
+.page6_section1 {
+  background: linear-gradient(196deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0px 0px 12px 12px;
+  margin-top: -1px;
+  position: relative;
+}
+
+.page6_section1:before, .page6_section1:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.page6_section1:before {
+  width: calc(100% - 40px);
+  background-color: #cacadb;
+  -webkit-transform: translate(-50%, 10px);
+          transform: translate(-50%, 10px);
+}
+
+.page6_section1:after {
+  width: calc(100% - 80px);
+  background-color: #e7e7f2;
+  -webkit-transform: translate(-50%, 20px);
+          transform: translate(-50%, 20px);
+}
+
+.page6_section1_container {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn_cons {
+  margin-bottom: 80px;
+}
+
+.services_info_cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  border-top: 4px solid rgba(255, 255, 255, 0.4);
+  padding: 20px 0;
+}
+
+.services_info_head {
+  font-family: "TT Norms Regular";
+  font-size: 24px;
+  line-height: 28px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.services_info_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 680px) {
+  .services_info_box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.services_info_col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.services_info_col_text {
+  font-family: "TT Norms Medium";
+  font-size: 18px;
+  line-height: 26px;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+
+.services_info_col_text::before {
+  content: '';
+  position: absolute;
+  background-color: #F0145A;
+  border-radius: 50%;
+  left: -3%;
+  top: 12px;
+  width: 4px;
+  height: 4px;
+}
+
+@media screen and (max-width: 1120px) {
+  .page6_header {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .page6_header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+.page6_section2_cont {
+  padding-top: 40px;
+}
+
+.page7_m-s_cont {
+  padding-bottom: 60px;
+}
+
+.switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: #E6E6F0;
+  min-width: 260px;
+  min-height: 40px;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.publications_switch {
+  text-decoration: none;
+  font-family: "TT Norms Medium";
+  font-size: 18px;
+  line-height: 21px;
+  color: #323264;
+  padding: 8px 0;
+  width: 128px;
+  background: #E6E6F0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.publications_switch_active {
+  background-color: #fff;
+}
+
+.publications_cards2 {
+  max-height: none;
+}
+
+@media screen and (max-width: 1320px) and (min-width: 890px) {
+  .publications_cards_col3 {
+    display: none;
+  }
+}
+
+.page7_btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 60px;
 }
 /*# sourceMappingURL=main.css.map */

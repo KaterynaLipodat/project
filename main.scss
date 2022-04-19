@@ -42,6 +42,14 @@
         justify-content: center;
     }
 }
+.page5_header{
+    margin-bottom: 73px;
+    @media screen and (max-width: 968px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
 .logo{
     display: flex;
     @media screen and (max-width: 768px){
@@ -51,7 +59,12 @@
         @include font ('TT Norms', 38px, 45px);
         color: $darkblue_main;
     }
+    .page5-name{
+        color: $white;       
+    }
+   
 }
+
 .nav{
     @extend %flex-column;
     align-items: flex-end;
@@ -174,10 +187,18 @@
         }
         .page-name_ltl{
             display: flex;
+            
             .page-name{
                 @include font ('TT Norms', 38px, 45px);
                 color: $darkblue_main;
                 @media screen and (max-width: 500px){
+                    @include font ('TT Norms', 19px, 22px);
+                }
+            }
+            .page5-name{
+                color: $white;
+                @media screen and (max-width: 500px){
+                    color: $white;
                     @include font ('TT Norms', 19px, 22px);
                 }
             }
@@ -244,6 +265,23 @@
             }
         }
     }
+}
+
+.nav_list_link_active{
+    position: relative;
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: $white;
+        top: 100%;
+        left: 0;
+    }
+}
+.nav_list_link_active:hover{
+    color: $white;
 }
 .nav_list_link_wbg{
     color: $blue_active;
@@ -717,6 +755,7 @@
     }
 }
 .page1_section3{
+    width: 100%;
     @media screen and (max-width: 500px){
         min-height: 590px;
     }
@@ -735,7 +774,9 @@
     max-width: 1799px;
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    
+    @media screen and (min-width:1800px){
+        margin: 0 auto;
+    }
     @media screen and (max-width: 500px){
         grid-template-columns: repeat(auto-fit, 187px);
         
@@ -1038,7 +1079,8 @@
     background: $grey_separator;
 
 }
-.page2_section1_container, .page2_section3_container, .page3_section1_container, .page4_section1_container, .page5_section1_container{
+
+.page2_section1_container, .page2_section3_container, .page3_section1_container, .page4_section1_container, .page5_section1_container, .page6_main-section{
     display: flex;
     justify-content: center;
     max-width: 1100px;
@@ -1544,4 +1586,181 @@
     &_picture_img{
         width: 100%;
     }
+}
+.page6_main-section{
+    background-image: url(./img/Cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    max-width: none;
+}
+.page6_main-section_container{
+    
+    @media screen and (min-width:1120px){
+        width: 1100px;
+    }
+    @media screen and (min-width:1440px){
+       width: 1320px;
+    }
+    
+}
+.services_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 620px) {
+        align-items: flex-start;
+    }
+}
+.services_info_text{
+    @include font ('TT Norms Regular', 21px, 30px);
+    color: $white;
+    max-width: 860px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 20px;
+    @media screen and (max-width: 620px) {
+        text-align: left;
+    }
+}
+.services_heading-mm{
+    margin-bottom: 20px;
+}
+.page6_section1{
+    background: linear-gradient(196deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    border-radius: 0px 0px 12px 12px;
+    margin-top: -1px;
+    position: relative;
+    
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        height: 10px;
+        border-radius: 0px 0px 12px 12px;
+    }
+      &:before {
+        width: calc(100% - 40px);
+        background-color: #cacadb;
+        transform: translate(-50%, 10px);
+    }
+      &:after {
+        width: calc(100% - 80px);
+        background-color: #e7e7f2;
+        transform: translate(-50%, 20px);
+    }
+}
+.page6_section1_container{
+    padding-top: 40px;
+    display: flex;
+    max-width: 1100px;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.btn_cons{
+    margin-bottom: 80px;
+
+}
+.services_info_cont{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-top: 4px solid rgba(255, 255, 255, 0.4); 
+    padding: 20px 0;
+}
+
+.services_info_head{
+    @include font ('TT Norms Regular', 24px, 28px);
+    color: $white;
+    margin-bottom: 20px;
+}
+.services_info_box{
+    display: flex;
+    margin-bottom: 60px;
+    @media screen and (max-width: 680px){
+        flex-direction: column;
+    }
+}
+.services_info_col{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+}
+.services_info_col_text{
+    @include font ('TT Norms Medium', 18px, 26px);
+    color: $white;
+    display: block;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: $red_accent;
+        border-radius: 50%;
+        left: -3%;
+        top: 12px;
+        width: 4px;
+        height: 4px;
+    }
+}
+.page6_header{
+    @media screen and (max-width:1120px){
+        gap: 20px;
+    }
+    @media screen and (max-width: 968px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+}
+.page6_section2_cont{
+    padding-top: 40px;
+}
+.page7_m-s_cont{
+    padding-bottom: 60px;
+}
+.switcher{
+    display: flex;
+    align-self: center;
+    background-color: $grey_separator;
+    min-width: 260px;
+    min-height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.publications_switch{
+    text-decoration: none;
+    @include font ('TT Norms Medium', 18px, 21px);
+    color: $darkblue_main;
+    padding: 8px 0;
+    width: 128px;
+    background: $grey_separator;
+    text-align: center;
+    border-radius: 10px;
+   
+}
+.publications_switch_active{
+    background-color: $white;
+}
+.publications_cards2{
+    max-height: none;
+}
+.publications_cards_col3{
+    @media screen and (max-width: 1320px) and (min-width: 890px){
+        display: none;
+    }
+}
+.page7_btn{
+    align-self: center;
+    margin-bottom: 60px;
 }
